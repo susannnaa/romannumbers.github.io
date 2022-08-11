@@ -23,15 +23,15 @@
 
         let num = prompt("Please,text your roman number");
 
-        let values = num.toUpperCase().split("");
+        let arrayOfNum = num.toUpperCase().split("");
 
-        alert(values.reduce((previousVal, val, i) => {
+        alert(arrayOfNum.reduce((previousVal, val, i) => {
 
-            let nextVal = values[i + 1];
+            let nextVal = arrayOfNum[i + 1];
 
             if (romanNums[nextVal] > romanNums[val]) {
                 previousVal += (romanNums[nextVal] - romanNums[val]);
-                values.splice(i + 1, 1);
+                arrayOfNum.splice(i + 1, 1);
             } else {
                 previousVal += romanNums[val];
             }
